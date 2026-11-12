@@ -8,9 +8,9 @@ def load_series(path="data/series.csv"):
     with open(path) as f:
         rows = []
         for r in csv.DictReader(f):
-            if r["co2_ppm"] == "":
+            if r["pm2_5"] == "":
                 continue  # a day with zero real hourly readings -- nothing to average
-            rows.append({"date": r["date"], "value": float(r["co2_ppm"])})
+            rows.append({"date": r["date"], "value": float(r["pm2_5"])})
     return rows
 
 def clean_series(rows):
@@ -123,7 +123,7 @@ def main():
 
     output = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "unit": "ppm",
+        "unit": "µg/m³",
         "raw": [{"day": c["day"], "date": c["date"], "value": c["value"]} for c in cleaned],
         "gaps": [
             {"start_day": s, "end_day": e,
