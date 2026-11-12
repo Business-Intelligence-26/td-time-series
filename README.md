@@ -1,5 +1,7 @@
 # Student manual — TD4: Time series: collection, cleaning, smoothing, and honest projection
 
+> **[dashboard is live](https://business-intelligence-26.github.io/td-time-series/)**
+
 **Before you start:** create a file called `REFLECTIONS.md` in your repo now. Every
 question in this document (marked **Reflection**) gets a short answer (2-4 sentences
 — a real judgment, not a definition) written into that file, under a heading matching
